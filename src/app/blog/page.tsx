@@ -33,13 +33,13 @@ const BlogPostCard = ({ post }: { post: any }) => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="rounded-2xl border bg-card text-card-foreground shadow-sm transition hover:-translate-y-1 hover:shadow-xl overflow-hidden"
+        className="rounded-2xl border border-green-500/20 bg-gray-900 text-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl overflow-hidden"
     >
         <Link href={`/blog/${post.slug}`}>
             <Image src={post.image} alt={post.title} width={400} height={250} className="w-full h-48 object-cover" />
             <div className="p-6">
-                <h2 className="text-xl font-semibold">{post.title}</h2>
-                <p className="mt-2 text-sm text-muted-foreground">{post.excerpt}</p>
+                <h2 className="text-xl font-semibold text-green-300">{post.title}</h2>
+                <p className="mt-2 text-sm text-gray-300">{post.excerpt}</p>
             </div>
         </Link>
     </motion.div>
@@ -50,22 +50,22 @@ export default function BlogPage() {
     const otherPosts = blogPosts.filter(p => !p.featured);
 
     return (
-        <section className="py-12 md:py-20">
+        <section className="py-12 md:py-20 bg-background">
             <div className="container px-4 md:px-6">
-                <h1 className="text-4xl font-bold text-center mb-12">Our Blog</h1>
+                <h1 className="text-4xl font-bold text-center mb-12 text-white">Our Blog</h1>
                 {featuredPost && (
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="mb-12"
+                        className="mb-12 rounded-3xl border border-green-500/20 bg-gray-900 p-6 shadow-lg"
                     >
                         <Link href={`/blog/${featuredPost.slug}`}>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                                 <Image src={featuredPost.image} alt={featuredPost.title} width={600} height={400} className="rounded-lg" />
                                 <div>
-                                    <h2 className="text-3xl font-bold">{featuredPost.title}</h2>
-                                    <p className="mt-4 text-muted-foreground">{featuredPost.excerpt}</p>
+                                    <h2 className="text-3xl font-bold text-green-300">{featuredPost.title}</h2>
+                                    <p className="mt-4 text-gray-300">{featuredPost.excerpt}</p>
                                 </div>
                             </div>
                         </Link>

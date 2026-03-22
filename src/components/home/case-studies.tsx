@@ -1,6 +1,9 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -30,16 +33,23 @@ const CaseStudies = () => {
         <h2 className="text-3xl font-bold text-center mb-8">Case Studies</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {caseStudies.map((study, index) => (
-            <div key={index} className="border rounded-lg overflow-hidden soft-shadow hover:shadow-lg transition-shadow">
-              <Image src={study.image} alt={study.title} width={400} height={250} />
+            <motion.div
+              key={index}
+              className="border border-green-500/20 rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:border-green-500/40 transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Image src={study.image} alt={study.title} width={400} height={250} className="hover:scale-105 transition-transform duration-300" />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{study.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">{study.title}</h3>
                 <p className="text-muted-foreground mb-4">{study.excerpt}</p>
-                <Link href={`/case-studies/${study.slug}`} className="text-primary hover:underline">
-                  Read More
+                <Link href={`/case-studies/${study.slug}`} className="text-green-400 hover:text-green-300 transition-colors font-medium">
+                  Read More →
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

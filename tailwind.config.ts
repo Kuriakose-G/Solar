@@ -89,11 +89,25 @@ const config: Config = {
           "0%, 100%": { opacity: "0.7" },
           "50%": { opacity: "1" },
         },
+        "fadeIn": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "scaleIn": {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "glow": "glow 2s ease-in-out infinite",
+        "fade-in": "fadeIn 0.5s ease-in",
+        "scale-in": "scaleIn 0.4s ease-out",
+      },
+      backgroundImage: {
+        "warm-gradient": "linear-gradient(135deg, hsl(37 100% 54%) 0%, hsl(25 95% 50%) 100%)",
+        "solar-gradient": "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%)",
       },
     },
   },

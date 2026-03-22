@@ -21,7 +21,7 @@ const FeaturedProducts = () => {
                 <p className="text-green-400 text-xl font-semibold mb-4">£{product.priceGBP.toFixed(2)}</p>
                 <Link
                   href={`/products/${product.slug}`}
-                  className="inline-block bg-green-500 text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:bg-green-400"
+                  className="inline-block bg-green-500 text-black font-semibold px-6 py-3 rounded-lg shadow-md shadow-green-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-green-400 hover:shadow-green-400/50"
                 >
                   View Details
                 </Link>

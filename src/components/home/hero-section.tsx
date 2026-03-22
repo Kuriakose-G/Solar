@@ -35,13 +35,13 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col gap-4 min-[400px]:flex-row justify-center">
               <Link
-                className="inline-flex h-14 items-center justify-center rounded-lg bg-green-500 px-10 text-lg font-semibold text-black shadow-lg transition-transform transform hover:scale-105 hover:bg-green-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 disabled:pointer-events-none disabled:opacity-60"
+                className="inline-flex h-14 items-center justify-center rounded-lg bg-green-500 px-10 text-lg font-semibold text-black shadow-lg shadow-green-500/40 transition-all transform hover:scale-105 hover:bg-green-400 hover:shadow-green-400/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 disabled:pointer-events-none disabled:opacity-60"
                 href="/contact"
               >
                 Get a Quote
               </Link>
               <Link
-                className="inline-flex h-14 items-center justify-center rounded-lg border border-green-400 bg-transparent text-white/90 px-10 text-lg font-semibold shadow-md transition-all hover:bg-green-400 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 disabled:pointer-events-none disabled:opacity-60"
+                className="inline-flex h-14 items-center justify-center rounded-lg border border-green-400 bg-transparent text-white/90 px-10 text-lg font-semibold shadow-md shadow-green-400/20 transition-all hover:bg-green-400 hover:text-black hover:shadow-green-400/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 disabled:pointer-events-none disabled:opacity-60"
                 href="/products"
               >
                 Learn More

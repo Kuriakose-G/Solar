@@ -26,7 +26,7 @@ export function Header() {
         {navLinks.map((link) => (
           <Link
             key={link.href}
-            className="nav-link group text-lg font-medium text-gray-300 transition-colors duration-300"
+            className="nav-link group text-lg font-medium text-gray-300 hover:text-green-400 transition-colors duration-300"
             href={link.href}
           >
             <span className="nav-link">{link.label}</span>
@@ -34,7 +34,7 @@ export function Header() {
         ))}
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-semibold px-6 py-3 rounded-lg transition-all duration-250 transform hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))]"
+          className="inline-flex items-center justify-center bg-green-500 text-black font-semibold px-6 py-3 rounded-lg shadow-md shadow-green-500/40 transition-all duration-250 transform hover:-translate-y-0.5 hover:bg-green-400 hover:shadow-green-400/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300"
         >
           Get Quote
         </Link>
@@ -65,7 +65,7 @@ export function Header() {
               ))}
               <Link
                 href="/contact"
-                className="bg-green-500 text-black font-semibold px-6 py-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 hover:bg-green-400"
+                className="bg-green-500 text-black font-semibold px-6 py-4 rounded-lg text-center shadow-md shadow-green-500/40 transition-all duration-300 transform hover:scale-105 hover:bg-green-400 hover:shadow-green-400/60"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Quote
